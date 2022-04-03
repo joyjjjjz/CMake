@@ -1,22 +1,21 @@
 {
-    "name": "C++ Launch",
-    "type": "cppdbg",
-    "request": "launch",
-    "program": "${workspaceFolder}/a.out",
-    "stopAtEntry": false,
-    "customLaunchSetupCommands": [
-      { "text": "target-run", "description": "run target", "ignoreFailures": false }
-    ],
-    "launchCompleteCommand": "exec-run",
-    "linux": {
-      "MIMode": "gdb",
-      "miDebuggerPath": "/usr/bin/gdb"
-    },
-    "osx": {
-      "MIMode": "lldb"
-    },
-    "windows": {
-      "MIMode": "gdb",
-      "miDebuggerPath": "C:\\MinGw\\bin\\gdb.exe"
-    }
-  }
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "windows",
+            "program": "${workspaceFolder}/build/Tutorial.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "linux",
+            "program": "${workspaceFolder}/build/test",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
